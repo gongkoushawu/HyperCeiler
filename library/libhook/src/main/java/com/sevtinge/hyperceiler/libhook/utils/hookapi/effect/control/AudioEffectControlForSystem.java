@@ -116,7 +116,7 @@ public class AudioEffectControlForSystem extends BaseEffectControl implements IC
      */
     private void hookAudioEffectSetEnabled() {
         findAndHookMethod("android.media.audiofx.AudioEffect", "setEnabled",
-            boolean.class,
+            int.class,
             new IMethodHook() {
                 @Override
                 public void before(BeforeHookParam param) {
